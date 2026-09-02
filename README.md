@@ -2,7 +2,7 @@
 
 만 3세 이상 아이 아침, 불 안 쓰고 차리는 원물 식단 10가지 패턴 웹페이지.
 
-https://jihyunan8293.github.io/achim-wonmulsik/
+https://rorian-mom.github.io/
 
 - `index.html` — 페이지 전체. 제품 사진까지 파일 안에 들어 있어서 이 파일 하나면 어디서든 열려요.
 
