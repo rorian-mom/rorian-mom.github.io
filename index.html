@@ -117,6 +117,18 @@
               font-size:11.5px; letter-spacing:-0.2px; line-height:1.65;
               color:#8A5F27; text-align:center; }
   .cta-note b { color:#7A5017; font-weight:700; }
+
+  /* ── 릴스 · 공구일정 버튼 ── */
+  .link-row { display:flex; align-items:stretch; gap:10px; padding:24px 16px 4px; }
+  .link-btn { flex:1; display:flex; align-items:center; justify-content:center; text-align:center;
+              padding:15px 10px; border-radius:14px; text-decoration:none; color:#fff;
+              font-size:13.5px; font-weight:700; line-height:1.45; letter-spacing:-0.2px;
+              transition:transform 0.12s; }
+  .link-btn:active { transform:scale(0.98); }
+  .link-reels { flex:1.7;
+                background:linear-gradient(135deg,#F5A54A 0%,#E4643E 28%,#D62A63 62%,#A32B8F 100%);
+                box-shadow:0 4px 14px rgba(196,52,110,0.28); }
+  .link-schedule { background:var(--sage-deep); box-shadow:0 4px 14px rgba(85,107,69,0.25); }
 </style>
 </head>
 <body>
@@ -145,6 +157,12 @@
     <div class="legend-item"><span class="legend-dot" style="background:#CFC7EC;"></span>건강한 지방</div>
   </div>
   <div class="meals" id="meals"></div>
+  <div class="link-row">
+    <a class="link-btn link-reels" target="_blank" rel="noopener"
+       href="https://www.instagram.com/reel/DZfF-rzS3m7/">10가지 식단표 구성<br>릴스로 보기 👀</a>
+    <a class="link-btn link-schedule" target="_blank" rel="noopener"
+       href="https://link.inpock.co.kr/rorian">로리안<br>공구일정</a>
+  </div>
   <div class="notice-wrap">
     <div class="notice-card">
       <h3>📖 꼭 읽어주세요!</h3>
@@ -168,12 +186,11 @@
     <div class="copyright-card">
       <div class="cr-title">© 저작권 안내</div>
       본 식단표는 '로리안'이 직접 기획·제작한 콘텐츠입니다.<br>
-      내용의 일부 또는 전체를 무단 복제, 재배포, PDF 재가공 또는 상업적으로 이용하는 것을 금지합니다.<br>
-      공유 시에는 반드시 출처를 표기해주세요.
+      내용의 일부 또는 전체를 <b>무단 공유</b>, 복제, 재배포, PDF 재가공 또는 상업적으로 이용하는 것을 금지합니다.
     </div>
   </div>
   <footer>
-    <div class="footer-brand">로리안 · 아침원물식 🌿</div>
+    <div class="footer-brand">로리안 · 아침원물식 🥣</div>
   </footer>
 </div>
 <script>
