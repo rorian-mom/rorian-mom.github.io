@@ -2,9 +2,9 @@
 
 만 3세 이상 아이 아침, 불 안 쓰고 차리는 원물 식단 10가지 패턴 웹페이지.
 
+https://jihyunan8293.github.io/achim-wonmulsik/
+
 - `index.html` — 페이지 전체. 제품 사진까지 파일 안에 들어 있어서 이 파일 하나면 어디서든 열려요.
-- 검색엔진에 안 잡히도록 `noindex` 설정이 들어가 있어요. 정식 공개할 때 `index.html` 위쪽의
-  `<meta name="robots" content="noindex, nofollow">` 한 줄만 지우면 됩니다.
 
 ## 수정할 때
 
