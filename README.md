@@ -8,6 +8,8 @@ https://rorian-mom.github.io/
 
 - `bookshelf/index.html` — [로리안] 도운이네 엄마표영어 책장 (https://rorian-mom.github.io/bookshelf/)
 
+- `roadmap/index.html` — 도운이네 영어 미디어 로드맵 (https://rorian-mom.github.io/roadmap/)
+
 ## 수정할 때
 
 내용을 고치려면 `index.html`을 새 파일로 덮어쓰고 커밋하면 GitHub Pages에 바로 반영돼요.
