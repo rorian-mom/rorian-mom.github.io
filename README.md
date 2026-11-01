@@ -4,7 +4,9 @@
 
 https://rorian-mom.github.io/
 
-- `index.html` — 페이지 전체. 제품 사진까지 파일 안에 들어 있어서 이 파일 하나면 어디서든 열려요.
+- `index.html` — 아침원물식 식단표 페이지 전체. 제품 사진까지 파일 안에 들어 있어서 이 파일 하나면 어디서든 열려요.
+
+- `bookshelf/index.html` — [로리안] 도운이네 엄마표영어 책장 (https://rorian-mom.github.io/bookshelf/)
 
 ## 수정할 때
 

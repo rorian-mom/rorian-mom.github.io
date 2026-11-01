@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>도운이네 엄마표영어 책장</title>
+<meta name="description" content="영어책 1,000권 사본 엄마의 시기별 추천 영어 원서 · 로리안 @rori.an">
+<meta property="og:title" content="[로리안] 도운이네 엄마표영어 책장">
+<meta property="og:description" content="영어책 1,000권 사본 엄마의 시기별 추천 영어 원서">
+<style>body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: 한 권짜리 책장. 표지(히어로) → 공구 띠지 → 시작 전에 → 1~4단계 책 칸 → 옥스퍼드 와이즈 → 마치며 */
+:root{
+  --paper:#FBFAF7; --sheet:#FFFFFF; --ink:#1F2A37; --muted:#5B6672; --line:#E4E1DA;
+  --accent:#2D4B73; --accent-soft:#E7EDF5;
+  --s1:#F2C94C; --s1-soft:#FCF4D6;
+  --s2:#EE8B5E; --s2-soft:#FCE6DA;
+  --s3:#6FA58A; --s3-soft:#E1EFE7;
+  --s4:#5B8FC9; --s4-soft:#E1ECF8;
+  --star:#D9A400; --blue-ink:#2F6DB5;
+  --screen:#EEEDEA; --screen-ink:#1F2A37; --screen-chip:#FFFFFF;
+  --display:"Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
+  --body:"Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#14181E; --sheet:#1C222A; --ink:#ECEAE4; --muted:#A3ACB6; --line:#2E3640;
+  --accent:#9DB8DD; --accent-soft:#233246;
+  --s1:#E5BE45; --s1-soft:#3A331B; --s2:#E9926A; --s2-soft:#3D2A21;
+  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8;
+  --screen:#25282D; --screen-ink:#ECEAE4; --screen-chip:#30343A;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#14181E; --sheet:#1C222A; --ink:#ECEAE4; --muted:#A3ACB6; --line:#2E3640;
+  --accent:#9DB8DD; --accent-soft:#233246;
+  --s1:#E5BE45; --s1-soft:#3A331B; --s2:#E9926A; --s2-soft:#3D2A21;
+  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8;
+  --screen:#25282D; --screen-ink:#ECEAE4; --screen-chip:#30343A;
+  color-scheme:dark }
+*{box-sizing:border-box}
+body,h1,h2,h3,p,li,span,dd,dt,a{word-break:keep-all;overflow-wrap:break-word}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;text-wrap:balance;margin:0;line-height:1.35}
+.ln{display:block}
+.ln+.ln{margin-top:4px}
+.para{display:flex;flex-direction:column;gap:6px}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;font-weight:700;color:var(--muted)}
+
+/* 표지 */
+.cover{display:flex;flex-direction:column;gap:16px}
+.cover h1{display:flex;flex-direction:column}
+.brandrow{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:-8px}
+.cover .brand{font-size:clamp(17px,4.4vw,21px);font-weight:800;color:var(--accent);letter-spacing:.02em}
+.cover .nm{font-size:clamp(34px,9.4vw,52px);line-height:1.18;letter-spacing:-.035em}
+.cover .sub{font-size:clamp(17px,4.6vw,21px);font-weight:700;line-height:1.5}
+.cover .sub em{font-style:normal;background:linear-gradient(transparent 60%,var(--s1-soft) 60%)}
+.spines{display:flex;gap:4px;align-items:flex-end;height:44px}
+.spines i{display:block;width:12px;border-radius:2px 2px 0 0}
+.lead{display:flex;flex-direction:column;gap:18px;color:var(--ink)}
+.lead b{font-weight:700}
+.byline{font-size:14px;color:var(--muted)}
+
+/* 공구 띠지 */
+.band{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  background:var(--accent);color:var(--paper);border-radius:14px;padding:16px 18px;text-decoration:none}
+.band strong{font-family:var(--display);font-weight:800;font-size:18px;display:block}
+.band .pick{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;background:var(--paper);color:var(--accent);border-radius:999px;padding:1px 8px;margin-bottom:6px;opacity:1}
+.band span{font-size:14px;opacity:.9}
+.band .go{font-size:14px;font-weight:700;white-space:nowrap;background:var(--paper);color:var(--accent);border-radius:999px;padding:8px 14px;opacity:1}
+.band .desc{display:block;font-size:14px;line-height:1.6;margin:6px 0 10px;opacity:.95}
+.band .deal{display:inline-block;font-size:16px;font-weight:800;color:#1F2A37;background:var(--s1);border-radius:8px;padding:4px 12px;opacity:1;font-variant-numeric:tabular-nums}
+
+/* 단계 내비 */
+.stagenav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);
+  padding-block:10px;display:flex;gap:8px;overflow-x:auto;border-bottom:1px solid var(--line);margin-inline:-4px;padding-inline:4px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.stagenav a{flex:0 0 auto;font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;
+  padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--sheet)}
+.stagenav a .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.stagenav label{flex:0 0 auto;margin-left:auto;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px;padding-left:8px;white-space:nowrap}
+
+/* 시작 전에 */
+.before{display:flex;flex-direction:column;gap:14px}
+.before h2{font-size:24px}
+.pull{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.6;border-left:3px solid var(--accent);padding-left:16px}
+.note{font-size:14px;color:var(--muted);background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.disclose{font-size:13px;color:var(--muted)}
+
+/* 단계 */
+.stage{display:flex;flex-direction:column;gap:20px;scroll-margin-top:72px}
+.stage-head{display:flex;flex-direction:column;gap:8px;border-radius:16px;padding:20px;background:var(--soft)}
+.stage-head .num{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--ink)}
+.stage-head h2{font-size:24px}
+.stage-head .age{font-size:14px;color:var(--muted)}
+.stage-head .motto{font-weight:700;font-size:16px}
+.goal{font-size:15px}
+.goal{display:flex;flex-direction:column;gap:8px}
+.goal b{display:block;font-size:13px;letter-spacing:.06em;color:var(--muted);margin-bottom:2px}
+.shelf-title{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.shelf-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.shelf{display:flex;flex-direction:column;gap:10px}
+.shelf-title{justify-content:space-between}
+.shelf-title::after{display:none}
+.shelf-title{border-bottom:1px solid var(--line);padding-bottom:8px}
+.expand{font:inherit;font-size:13px;font-weight:700;color:var(--accent);background:none;border:0;padding:4px 0;cursor:pointer;letter-spacing:0}
+.snote{font-size:14px;color:var(--muted)}
+.books{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.book{background:var(--sheet);border:1px solid var(--line);border-left:5px solid var(--spine);border-radius:4px 12px 12px 4px;overflow:hidden}
+.book details>summary,.tips>summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:14px 16px}
+.book details>summary::-webkit-details-marker,.tips>summary::-webkit-details-marker{display:none}
+.sum{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.ttl{font-family:var(--display);font-weight:800;font-size:17px;line-height:1.4;letter-spacing:-.02em;display:block}
+.ttl .star{margin-right:5px}
+.ttl .tag{margin-left:4px;vertical-align:2px;white-space:nowrap}
+.hook{font-size:14.5px;color:var(--muted);line-height:1.5}
+.book .star{color:var(--star);font-size:15px}
+.book .tag{font-family:var(--body);font-size:12px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:1px 8px}
+.chev{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--soft);position:relative;transition:transform .2s}
+.chev::before{content:"";position:absolute;left:50%;top:45%;width:7px;height:7px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translate(-50%,-50%) rotate(45deg)}
+details[open]>summary .chev{transform:rotate(180deg)}
+.book details[open]>summary{padding-bottom:6px}
+.book details[open] .hook{color:var(--ink);font-weight:500}
+.bd{padding:4px 16px 16px;display:flex;flex-direction:column;gap:10px}
+.bd p{font-size:15px;line-height:1.65}
+.links{display:flex;flex-wrap:wrap;gap:6px 16px}
+.book .link{font-size:13.5px;font-weight:700}
+.gprow{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;border-top:1px dashed var(--line);padding:10px 16px;background:var(--accent-soft)}
+.book .gp{font-size:13.5px;font-weight:800;color:var(--accent)}
+.bnotify{font-size:14px;font-weight:800;color:var(--paper);background:var(--accent);text-decoration:none;border-radius:999px;padding:7px 14px;white-space:nowrap}
+.extra{font-size:14px;color:var(--muted)}
+.extra.next{color:var(--blue-ink);font-weight:700}
+.video{font-size:14px;background:var(--soft);border-radius:10px;padding:10px 14px}
+.tips{background:var(--sheet);border:1px solid var(--line);border-radius:12px;--soft:var(--accent-soft)}
+.tips .ttl{font-size:16px}
+.tips ul{margin:0;padding:0 16px 16px 36px;display:flex;flex-direction:column;gap:12px;font-size:15px}
+.mistake{font-size:15px;border:1px dashed var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.mistake .mlab{color:var(--s2);display:block}
+.mitem{display:flex;flex-direction:column;gap:2px}
+.mitem+.mitem{border-top:1px solid var(--line);padding-top:12px}
+.mitem strong{font-weight:800}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+body.only-star .book:not(.is-star){display:none}
+
+
+/* 영상 패널: 책 카드와 구분되는 '화면' */
+.media{background:var(--screen);color:var(--screen-ink);border-radius:18px;padding:18px 18px 20px;display:flex;flex-direction:column;gap:16px;position:relative}
+.mhead{display:flex;align-items:center;gap:6px 10px;font-size:16px;flex-wrap:wrap}
+.mnote{font-size:13.5px;font-weight:500;color:var(--muted)}
+.mhead b{font-weight:800;letter-spacing:-.01em}
+.tv{width:26px;height:19px;border:2.5px solid var(--accent);border-radius:5px;position:relative;flex:0 0 auto}
+.tv::after{content:"";position:absolute;left:50%;bottom:-7px;width:10px;height:2.5px;background:var(--accent);transform:translateX(-50%);border-radius:2px}
+.mrow{display:flex;flex-direction:column;gap:8px}
+.mlabel{font-size:12.5px;font-weight:700;letter-spacing:.06em;opacity:.7}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14.5px;font-weight:700;background:var(--screen-chip);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.mdesc{font-size:14px;opacity:.8}
+
+/* 옥스퍼드 */
+.oxford{background:var(--sheet);border:2px solid var(--accent);border-radius:18px;padding:24px 20px;display:flex;flex-direction:column;gap:14px;scroll-margin-top:72px}
+.oxford h2{font-size:26px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.facts div{background:var(--accent-soft);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:2px}
+.facts dt{font-size:12px;color:var(--muted)}
+.facts dd{margin:0;font-family:var(--display);font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+@media (max-width:460px){.facts{gap:8px}.facts div{padding:10px}.facts dd{font-size:15.5px}}
+.notify{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;border-radius:999px;padding:16px 20px}
+.notify:hover{filter:brightness(1.08)}
+.compo{font-size:15px;color:var(--muted);margin-top:-8px}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cta .notify{font-size:16px;padding:15px 12px;text-align:center}
+.notify.follow{background:var(--sheet);color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent)}
+@media (max-width:460px){.cta{grid-template-columns:1fr}.cta .notify{padding:14px 12px}}
+.cta .notify{white-space:nowrap}
+
+.end{display:flex;flex-direction:column;gap:12px}
+.end h2{font-size:24px}
+.copy{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+
+/* 편집 모드 (지현 님만 보임) */
+.edit-bar{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 32px)}
+.edit-bar button{font:inherit;font-size:15px;font-weight:800;border:0;border-radius:999px;padding:12px 18px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.18)}
+.edit-bar .primary{background:var(--accent);color:var(--paper)}
+.edit-bar .ghost{background:var(--sheet);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line),0 4px 16px rgba(0,0,0,.12)}
+.edit-bar .msg{font-size:13px;background:var(--sheet);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px;max-width:280px}
+body.editing [data-ek]{outline:1.5px dashed var(--accent);outline-offset:3px;border-radius:4px;cursor:text}
+body.editing [data-ek]:focus{outline-style:solid;background:var(--accent-soft)}
+body.editing .wrap{padding-bottom:120px}
+@media (max-width:460px){
+  .oxford{padding:20px 16px}
+  .oxford h2{font-size:23px}
+  .stagenav a{font-size:13px;padding:5px 10px}
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="cover">
+    <div class="spines" aria-hidden="true">
+      <i style="height:70%;background:var(--s1)"></i><i style="height:100%;background:var(--s2)"></i><i style="height:82%;background:var(--s3)"></i><i style="height:94%;background:var(--s4)"></i><i style="height:60%;background:var(--accent)"></i>
+    </div>
+    <div class="brandrow"><span class="brand">[로리안]</span><span class="eyebrow">@rori.an · 엄마표영어 7년차</span></div>
+    <h1 class="name"><span class="nm">도운이네<br>엄마표영어 책장</span></h1>
+    <p class="sub">영어책 1,000권 사본 엄마의 <em>시기별 추천 영어 원서</em></p>
+    <div class="lead">
+      <p><b>아이 6개월부터 노출한 엄마표영어 7년차에 들어섰어요.</b><br>
+      내년에 학교 가는 7세,<br>지금은 영어로 자신감 있게 자기 생각을 말하고 원어민과 토론해요.<br>
+      영어가 좋다고 어학원을 보내 달라 해서 유치원 끝나고 4개월째 다니고 있답니다.<br>(저는 축구를 보내고 싶었지만요 ㅠㅠ)</p>
+      <p><b>직접 사서 읽힌 책만 세어 보니 1,000권이 넘더라고요.</b><br>
+      그중 "돈 아깝지 않았다" 싶은 것만 들였던 시기별로 정리했어요.<br>저장해 두고 참고하세요.</p>
+    </div>
+  </header>
+
+  <a class="band" href="#oxford">
+    <div><span class="pick">로리안 PICK</span><strong>옥스퍼드 와이즈 픽처북 핫딜 🔥</strong><span class="desc">옥스퍼드 출판부가 검증하고 기획한<br>3~13세까지 두고두고 읽히는 갓성비 그림책 모음</span><span class="deal">11/2 오픈 · 공구가 11만원대</span></div>
+    <span class="go">자세히 보기 ↓</span>
+  </a>
+
+  <nav class="stagenav" aria-label="단계 바로가기">
+    <a href="#stage1"><span class="dot" style="background:var(--s1)"></span>1단계 0~3세</a>
+    <a href="#stage2"><span class="dot" style="background:var(--s2)"></span>2단계 4~6세</a>
+    <a href="#stage3"><span class="dot" style="background:var(--s3)"></span>3단계 6~7세</a>
+    <a href="#stage4"><span class="dot" style="background:var(--s4)"></span>4단계 7세~</a>
+    <label for="onlyStar"><input type="checkbox" id="onlyStar"> ⭐️만 보기</label>
+  </nav>
+
+  <section class="before">
+    <p class="eyebrow">시작 전에</p>
+    <h2>단계보다 중요한 한 가지</h2>
+    <p class="pull">"몇 살에 뭘 읽히느냐"가 아니라<br>"아이가 영어책을 어떤 감정으로 만나느냐"예요.</p>
+    <p>영어 첫 노출 시기는 집집마다 다르잖아요.<br>
+    영어 정서가 무너지면 비싸고 좋다는 커리큘럼도 소용없어요.</p>
+    <p>그래서 원서를 고르는 기준은<br>
+    ✖️ "얼마나 빨리 레벨을 올리느냐"가 아니라<br>
+    ✔️ "이 시기 아이가 무엇에 흥미가 있는가"예요.</p>
+    <p>한마디로 <b>아이 흥미와 취향 위주의 선택</b>이에요.</p>
+    <div class="note para">
+      <p>⚠️ 각 단계의 나이는 저희 집에서 책을 들였던 시기예요.</p>
+      <p>기준은 실제 나이가 아니라 <b>영어를 만난 지 얼마나 됐는가</b>예요.<br>같은 6세여도 노출 1년차와 4년차는 필요한 책이 완전히 달라요.</p>
+      <p>6~7세에 처음 시작했다면<br>원리(소리 노출 → 정서 → 읽기 연결)는 그대로 따라가되,<br>책은 아기 책 말고 지금 아이 취향에 맞는 걸로 고르세요.</p>
+    </div>
+    <p class="disclose">책 이름을 누르면 설명과 구매 링크가 펼쳐져요.<br>일부 추천 제품은 쿠팡파트너스, 네이버 브랜드 커넥트 활동의 일환으로 일정액의 수수료를 제공받습니다.</p>
+  </section>
+
+  <div id="stages"></div>
+
+  <section class="oxford" id="oxford">
+    <p class="eyebrow">로리안 PICK</p>
+    <h2>옥스퍼드 와이즈 픽처북 핫딜 🔥</h2>
+    <p><b>옥스퍼드 출판부가 검증하고 기획한<br>3~13세까지 두고두고 읽히는 갓성비 그림책 모음</b></p>
+    <p class="compo">(본책 81권, 가이드북, 사전, 포스터)</p>
+    <p>ORT를 만든 옥스퍼드에서 출판한 픽처북이에요.<br>세이펜 적용되어 영알못 엄마도 쉽게 보여주는 부담없는 원서를 최저가로 가져올 예정이에요.</p>
+    <dl class="facts">
+      <div><dt>오픈</dt><dd>11월 2일</dd></div>
+      <div><dt>공구가</dt><dd>11만원대</dd></div>
+      <div><dt>출판</dt><dd>옥스퍼드</dd></div>
+    </dl>
+    <p>오픈 소식은 인스타 스토리와 피드에서도 알려드려요!</p>
+    <div class="cta">
+      <a class="notify" href="https://www.instagram.com/p/DfJ_Hfiyxr2/" target="_blank" rel="noopener">🔔 자세히 보고 알림신청</a>
+      <a class="notify follow" href="https://www.instagram.com/rori.an/" target="_blank" rel="noopener">로리안 팔로우해두기</a>
+    </div>
+  </section>
+
+  <section class="end">
+    <p class="eyebrow">마치며</p>
+    <h2>살아남은 책들의 공통점</h2>
+    <p>1,000권 넘게 가지고 있으면서<br>정말 잘 읽은 책들의 공통점은 하나예요.</p>
+    <p class="pull">"아이가 보고 웃는 책."</p>
+    <p>우리 아이의 웃음 포인트를 찾는 것,<br>그리고 아이 취향에 맞는 책들로 거실을 자연스럽게 채우는 것.<br>그게 엄마표를 이어가는 동력이라고 생각해요.</p>
+  </section>
+
+  <footer class="copy">
+    <b>© 저작권 안내</b>
+    <span>본 영어 원서 추천 콘텐츠는 '로리안'이 직접 기획·작성한 콘텐츠입니다. 내용의 일부 또는 전체를 무단 복제, 재배포, PDF 재가공 또는 상업적으로 이용하는 것을 금지합니다.</span>
+  </footer>
+</div>
+
+<script type="application/json" id="edits">{}</script>
+<script>
+var SRC=(function(){var h=document.body.innerHTML,a=h.indexOf('<'+'!--rorian:start--'+'>'),b=h.indexOf('<'+'!--rorian:end--'+'>');return (a<0||b<0)?null:h.slice(a,b+17)})();
+var C='https://link.coupang.com/a/';
+// 알림받기 링크: 네이버 폼 링크가 생기면 여기만 바꾸면 돼요
+var NOTIFY='https://naver.me/5T0stpT1';
+var STAGES=[
+ {id:'stage1',n:1,c:'s1',title:'소리 노출기',age:'0~3세',motto:'"영어는 그냥 우리 집 소리"',
+  goal:['영어를 공부가 아니라 엄마 냄새 나는 소리로 기억하게 하기','그림과 문장이 정확히 일치하는 원서로 시작하기. 해석 없이도 들리는 소리와 보이는 직관적인 그림을 연결해 의미를 파악해요 (모국어 습득 방식과 동일)'],
+  books:[
+   {s:1,gp:'27.01.11 공동구매 예정',nt:NOTIFY,h:'엄마표영어 첫 책, 자장가처럼 불러 준 노래책',t:'노부영 베이비 베스트',u:C+'igLve2Gj6W',d:'저는 CD로 들려줬는데, 지금은 세이펜 버전으로 나와요. 음원 틀어 놓고 손가락으로 포인팅하면서 엄마 목소리로도 들려줬어요. 아기 재울 때마다 Little Green Monster를 자장가로 불렀어요. 애착 형성에 좋은 Whose Baby Am I?와 Does a Kangaroo Have a Mother, Too?(에릭 칼), 실사 그림과 영어 소리를 잇는 Baby\'s Busy Day도 정말 유용해요.'},
+   {s:1,h:'뜻보다 소리와 리듬부터, 영미권 전래동요',t:'베이비 마더구스 (구. 푸름이 마더구스)',u:C+'igLHkBXZsW',d:'영미권 국민 전래동요 모음이에요. 자장가로 많이 불러줬어요. 뜻보다 소리와 리듬을 흡수하기 좋아요. 그림체도 아기자기하고, 좋아하는 책은 닳을 때까지 오래 애정하며 봤어요.'},
+   {h:'리듬 반복으로 문장 뜻을 스스로 유추해요',t:'에릭 칼 Bear 시리즈',u:C+'igLDmbFpf2',d:'리듬 반복은 이 시기 최강이에요. 그림과 반복 문장을 동시에 들으며 아이가 문장의 의미를 스스로 유추해요.'},
+   {h:'색채도 음원도 아름다운 벌레 이야기',t:'에릭 칼 Very 시리즈',u:C+'gc4wJEh6US',d:'애벌레 책으로 유명한데 색채도 음원도 아름다워요. 애벌레, 거미, 귀뚜라미 이야기라 아이들이 호기심 있게 봐요.'},
+   {h:'강렬한 색감에 아기 시선이 오래 머무는 첫 원서',t:'픽토리 빼뜨르 호라체크',u:'https://naver.me/xbK9uoYO',d:'채도 높은 강렬한 색감이라, 시각이 발달 중인 아이 시선이 오래 머물러요. 그림이 단순하고 문장이 간결해 그림과 영어 소리를 맞추는 첫 원서로 부담이 없어요.'},
+   {s:1,gp:'26.12.08 공동구매 예정',nt:NOTIFY,h:'라임의 교과서, 파닉스 기초 체력을 귀로 쌓아요',t:'노부영 닥터수스 보드북',u:'https://www.jybooks.com/product/detailView.asp?isProduct=Y&ItemCode=020000004A227ACE640FD6DB08B534357508E03EB441CA203B453BD271CD5AA8A1E74C47&GotoPage=1&CategoryID=0&WriterCode=&OrderBy=%ED%95%A0%EC%9D%B8%EC%9C%A8&ListType=gallery&ItemSearch=%EB%8B%A5%ED%84%B0%EC%88%98%EC%8A%A4%20%EB%B3%B4%EB%93%9C%EB%B6%81',d:'라임의 교과서예요. cat-hat-mat처럼 소리가 맞아떨어지는 단어가 노래처럼 반복되는데, 이 라임 감각이 나중에 파닉스의 기초 체력이 돼요. 글자를 배우기 전에 소리의 패턴부터 귀에 심어두는 거죠. 말장난 같은 넌센스 라임에 아이가 깔깔거리는 건 덤이고, 보드북이라 물고 던져도 버텨요.'},
+   {s:1,h:'신나는 노래 반복으로 사이트워드가 눈에 익어요',t:'노부영 사이트워드 리더',tag:'단품판매종료',u:'https://jybooks.com/dreamTogether/dreamTogether_total.asp?CommonName=%ED%94%84%EB%A6%AC%EC%8A%A4%ED%83%80%ED%84%B0&CommonCode=312002&Etc3=1031',d:'음원이 신나서 틀어 주면 아이가 흔들흔들해요. 사이트워드는 자주 나와서 눈에 익혀야 하는 단어인데, 이 세트는 그걸 노래 반복으로 해결해요. 나중에 리더스에서 they will have, we all like를 술술 지나가는 걸 보면 이 세트 몫이 커요. (지금은 알파벳 리더와 함께 프리스타터 패키지로 묶여 있어요)'},
+   {s:1,gp:'26.11.18 공동구매 예정',nt:NOTIFY,h:'베이비 다음 단계, 검증된 명작 그림책',t:'노부영 베스트 + 스테디 베스트',u:C+'gc6LDVd5gW',ul:'베스트 보러 가기 →',u2:C+'gc6NAJb2ce',ul2:'스테디 베스트 보러 가기 →',d:'베이비 시리즈를 재밌게 봤다면 베스트, 스테디로 이어 가면 좋아요. 검증된 명작 그림책은 이 시기에 제일 빛나요.'},
+   {h:'궁금한 세상을 실사 사진과 짧은 문장으로',t:'스콜라스틱 Let\'s Find Out',u:C+'gc6UTqKcns',d:'세상 모든 게 궁금해지는 시기에 좋아요. 날씨, 동물, 탈것이 실사 사진으로 나오고 페이지당 문장은 두 개 안팎이에요. 궁금한 걸 영어로 만나는 첫 경험이 돼요.'},
+   {h:'스티커와 독후활동으로 읽은 걸 손으로 갖고 놀아요',t:'카카오 키즈 잉글리시',tag:'절판',d:'스티커와 독후활동이 정말 잘 되어 있어요. 읽은 걸 손으로 갖고 노는 순간 그 표현이 아이 것이 돼요. 아이가 놀이로 생각하는 게 장점이에요.'}
+  ],
+  shelf3:{name:'영상 연계',books:[
+   {h:'영상과 책에서 같은 캐릭터를 만나 시너지',t:'맥스 앤 루비 · 까이유 · 페파피그',d:'영상과 책을 오가며 같은 캐릭터를 만나니 노출에 시너지가 나요.'}
+  ]},
+  extra:'이 외에도: Busy Day 보드북(플랩북), 메이지 보드북, DK 마이 퍼스트 북(실사책), Spot(플랩북)',
+  mnote:'두돌 이후 시청 권장',
+  video:'영상 및 영어 도서관 프로그램: 에그스쿨 Pre-K, VOOKS',
+  tips:['책 많을 필요 없어요. 같은 책 반복이 새 책 10권보다 나아요. 서식스대 연구에서 같은 그림책을 반복해 들은 3세 아이들이 새 단어를 더 잘 배우고 오래 기억했어요. 아이가 "또!"를 외치는 건 배우고 있다는 신호예요.','엄마 발음 걱정 마세요. 아이가 결국 따라가는 건 원어민 음원 발음이에요.','영어 자장가 하나쯤 외워서 불러 주세요. Twinkle Twinkle Little Star면 충분해요. 아이는 그 노래를 "엄마 냄새 나는 영어"로 기억해요.'],
+  mistakes:['흘려듣기만 하기. 책을 여러 번 보지 않고 음원만 듣는 건 의미가 없어요. 그림과 영어 소리가 연결되는 게 핵심이에요.','학습시키기. 한국어를 습득하듯 영어도 습득할 수 있는 환경을 만들어 주세요.']},
+ {id:'stage2',n:2,c:'s2',title:'영어 정서기',age:'4~6세',motto:'"책이 재밌으면 아이가 먼저 온다"',
+  goal:['"엄마 이것도 읽어 줘!"가 나오게 만들기. 관심사에서 책이 이어지게 해 주세요. 이 타이밍에 이후 읽기로 이어지는 원서 습관이 형성돼요.'],
+  books:[
+   {s:1,h:'웃긴 책만 골라 담아 다음 권으로 술술 넘어가요',t:'스콜라스틱 픽처북 컬렉션',d:'웃긴 책만 골라 담은 큐레이션이라 한 권 끝나면 그 자리에서 다음 권으로 넘어가요. "구성 정말 잘했다" 싶은 컬렉션이에요. 원어민 음원이 있어 영알못 엄마도 부담 없어요.'},
+   {s:1,h:'영상 → 책 → 블록 놀이로 수학과 영어를 함께',t:'넘버블럭스',u:C+'igM964Yk9I',d:'수학과 영어를 같이 잡는 인기 시리즈예요. 블록으로 캐릭터를 쌓고 워크북까지 이어져서, 눈으로 본 걸 손으로 다시 만들어요. 영상 → 책 → 블록 놀이로 이어 주면 활용도가 몇 배가 돼요.'},
+   {s:1,h:'똥파리가 웃긴 나이, 그림책처럼 읽는 챕터북',t:'플라이 가이',u:C+'igNeJyX2Dk',d:'챕터북이지만 글밥이 적어 그림책처럼 읽어 줄 수 있어요. 똥파리가 그저 웃긴 나이라 만화책처럼 몰입해서, 한 권 끝나면 계속 가져와요.'},
+   {h:'한두 문장으로 큰 웃음, 영어책이 만만해져요',t:'잔 토마스 시리즈',u:'https://www.wendybook.com/goods/detail/138212',d:'페이지당 한두 문장인데 웃음은 최상급이에요. 글밥 적은 책에서 큰 웃음이 터지는 경험이 "영어책은 만만한 것"으로 만들어 줘요.'},
+   {s:1,h:'아이가 "NO!"를 외치며 이야기에 참여해요',t:'모 윌리엄스 피죤 시리즈',u:C+'igNqJuqQRo',d:'비둘기가 아이한테 직접 조르는 이야기라 아이가 신나서 "NO!"를 외쳐요. 아이가 이야기의 참가자가 되는 원서예요.'},
+   {s:1,h:'큼직한 대화체, 의성어·의태어까지 귀에 쏙',t:'모 윌리엄스 엘리펀트 앤 피기',u:C+'igNvpG35d6',d:'코끼리 제럴드와 돼지 피기, 두 친구의 대화로만 이어지는 이야기예요. 큼직한 말풍선 대화체라 엄마와 아이가 한 명씩 맡아 역할극처럼 읽기 좋아요. 의성어와 의태어까지 자연스럽게 습득할 수 있고, 표정과 몸짓이 풍부해서 영어를 다 몰라도 감정이 먼저 전달돼요. 피죤 시리즈를 좋아했다면 바로 이어 보세요.'},
+   {h:'애착 인형 이야기로 "책은 내 이야기"가 돼요',t:'너플버니 시리즈',u:'https://ltr.co.kr/product/pictory-knuffle-bunny-3%EC%A2%85-audio-cd-%ED%8F%AC%ED%95%A8/14697/',d:'애착 인형을 잃어버린 아이의 이야기. 자기도 겪어본 공포라 "쟤 마음 내가 알아"가 감정이 일어요. 웃기진 않지만 찾으러 가는 과정에 감정이 이입하면서 "책 = 내 이야기"라는 감각이 생겨요.'},
+   {s:1,h:'귀여운 두 친구가 겪는 생활 밀착 에피소드',t:'핍 앤 포지',u:C+'igNUDcAeIe',d:'귀여운 캐릭터들이 이어가는 스토리예요. 생활에서 일어날 법한 에피소드라 아이가 자기 얘기처럼 몰입해서 봐요. 킥보드를 두고 다투거나 바지에 실수한 날처럼, 아이 일상과 똑같은 고민을 두 친구가 함께 풀어 가요. 문장이 짧고 그림이 따뜻해서 감정 표현과 생활 영어를 같이 익히기 좋아요.'}
+  ],
+  shelf2:{name:'논픽션 · 리더스',books:[
+   {s:1,h:'한 권이 금방 끝나 "하나 더!"가 나오는 리더스',t:'퍼스트 리틀 리더스',d:'"퍼리리"라고 불릴 만큼 유명한, 음원 있는 짧은 리더스예요. 한 권이 금방 끝나서 "하나 더!"가 쉽게 나오고, 반복되는 패턴 문장이 귀에 통째로 박혀요. 따라 말하다 보면 어느새 읽고 있어요.'},
+   {s:1,h:'키퍼네 가족에 정들면 1~9단계가 순삭',t:'ORT · ORT 넌픽션 · ORT 에일리언',d:'키퍼네 가족 이야기에 정들면 1~9단계 순삭이에요. 좋아하는 캐릭터가 매번 새로운 소동을 벌이니 아이가 먼저 다음 권을 찾고, 그 캐릭터 그대로 지식책·모험물까지 넓혀갈 수 있어요. (에일리언은 별개 캐릭터) 이 시기엔 음원 틀고 그림 보며 듣는 것만으로 충분해요. (돌아오는 이유: 캐릭터)'},
+   {h:'파닉스, 논픽션, 영어 수 세기까지 다양한 맛',t:'니콜 잉글리시 (매쓰 · 사이언스 · 파닉스)',d:'파닉스, 논픽션, 접하기 쉽지 않은 영어 수 세기까지 다양한 맛의 영어를 경험할 수 있어요.'},
+   {h:'동물 좋아하는 아이가 알아서 펴는 실사 책',t:'내셔널 지오그래픽 프리리더',d:'동물 좋아하는 아이라면 프리리더부터 단계별로. 실사 사진의 힘이 커서, 동물 보고 싶은 마음에 아이가 알아서 책을 펴요.'}
+  ]},
+  shelf3:{name:'영상 연계',books:[
+   {h:'영상과 책에서 같은 캐릭터를 만나 시너지',t:'맥스 앤 루비 · 까이유 · 페파피그 · 블루이',d:'영상과 책을 오가며 같은 캐릭터를 만나니 노출에 시너지가 나요.'}
+  ]},
+  extra:'이 외에도: 블루이, 미스터 판다, 존클라센&맥바넷의 동그라미 세모 네모 시리즈, Our Universe',
+  video:'영상 및 영어 도서관 프로그램: 에그스쿨 K, 에그스쿨 페어리테일, VOOKS',
+  tips:['교훈적인 책보다 웃긴 책이 무조건 이겨요. 웃음 = 반복 = 습득.','아이가 고른 책이 시시해 보여도 존중해 주세요. 취향 존중이 곧 정서예요.','영어 영상과 꼭 병행해 주세요. 영어 노출은 영상이 8할이에요.'],
+  mistakes:['"이제 파닉스 떼야 하는 거 아니야?" 조급해하기. 그림책 정서와 듣기 노출량이 안 쌓인 파닉스는 모래성이에요.']},
+ {id:'stage3',n:3,c:'s3',title:'읽기 독립 준비기',age:'6~7세',motto:'"혼자 드문드문 읽는 시기"',
+  goal:['그동안 그림책에서 본 단어를 다시 발견하고, 스스로 읽어 보는 경험 늘리기'],
+  note:'🔁 2단계에서 보던 책들도 이 시기까지 재밌게 이어서 봐요.',
+  books:[
+   {s:1,gp:'26.12.22 공동구매 예정',nt:NOTIFY,h:'파닉스 했는데, 책을 못 읽는다면?',t:'래프어랏 파닉스 · 사이트워드',d:'읽기의 정확성을 도와줄 치트키예요. 파닉스 한 번 했는데 다시 파닉스로 돌아간다? Nope! 규칙을 다시 외우는 게 아니라, 배운 규칙이 들어간 짧고 웃긴 이야기를 직접 읽어 보는 게 필요해요. 단모음, 장모음, 이중자음처럼 규칙별로 묶인 책이라 아이가 아는 소리로 끝까지 읽어 내는 경험을 쌓고, 사이트워드까지 함께 잡아요. 내용이 재밌어서 연습이 아니라 이야기책처럼 읽혀요.'},
+   {s:1,h:'좋아하는 캐릭터 그대로 지식책·모험물까지',t:'ORT · ORT 넌픽션 · ORT 에일리언',d:'키퍼네 가족 이야기에 정들면 1~9단계 순삭이에요. 좋아하는 캐릭터가 매번 새로운 소동을 벌이니 아이가 먼저 다음 권을 찾고, 그 캐릭터 그대로 지식책·모험물까지 넓혀갈 수 있어요. (에일리언은 별개 캐릭터) 이 시기엔 음원 틀고 그림 보며 듣는 것만으로 충분해요. (돌아오는 이유: 캐릭터)'},
+   {h:'파닉스 규칙을 이야기 속에서 저절로 익혀요',t:'나우 아임 리딩',tag:'절판',d:'파닉스 규칙별로 한 권씩, 그 규칙의 단어들만 모아 이야기를 만든 세트예요. -at 규칙 책엔 cat, hat, bat이 쏟아지는 식이라, 파닉스의 암묵적인 규칙을 학습하는 게 아니라 이야기 속에서 계속 마주치다 보니 머릿속에 저절로 들어가게 되는거죠.'},
+   {h:'엄마 한 쪽, 아이 한 쪽 번갈아 읽는 기초 리딩북',t:'어스본 베리 퍼스트 리딩',d:'파닉스 단계에 맞춰 1권부터 15권까지 설계된 기초 리딩북 시리즈에요. 이제 막 읽기를 시작하려고 하는데 어떻게 해야할 지 모르겠을 때 도움이 되는 책이고, 독특하게 왼쪽은 부모님이 읽어주는 페이지, 오른쪽은 아이가 읽는 페이지로 구분되어 있는게 특징이에요. "엄마가 한 쪽, 네가 한 쪽" 번갈아 읽기로 부담을 나눌 수 있어요.'},
+   {h:'그림 없는 챕터북으로 건너가는 다리',t:'어스본 영 리딩 1~2단계',d:'읽지말고 들려주는 것부터 시작하세요! 도운이는 ORT 9단계까지 이해하길래 이후로 진입한 책이에요. 삽화가 그림책들보다는 줄고, 글밥은 많아지는, ‘그림 없는 챕터북으로 건너가는 다리’에요. 신데렐라, 헨젤과 그레텔처럼 이미 아는 이야기라 내용 이해에 힘 뺄 필요가 없고, 아이의 에너지는 늘어난 글밥과 새 어휘에 쓰여요. 명작에 논픽션까지 1·2단계 각 50권, 48권이라, 취향 따라 골라도 한참 가는 분량이에요.'}
+  ],
+  video:'영상 및 영어 도서관 프로그램: 에그스쿨 초등, 에그스쿨 뮤지컬라임, 영어도서관 EPIC',
+  tips:['듣는 책은 수준 높게, 읽는 책은 시시할 만큼 쉽게. 투 트랙으로!','틀리게 읽어도 끊지 마세요. 다음 문장을 엄마가 바르게 읽어 주면 알아서 기억해요.'],
+  mistakes:['그림책 끊고 리더스만 읽히기. 재미가 사라지면 읽기 싫어져요. 재밌어하는 그림책은 계속 병행! 그림책이 리더스책 형태로 나온 책들도 있어요!']},
+ {id:'stage4',n:4,c:'s4',title:'읽기 독립기',age:'7세 ~ 초등 입학',motto:'"영상 노출은 점점 줄이고 집중 듣기, 읽기에 돌입"',
+  goal:['얼리 챕터북으로 넘어가며 "영어책 읽는 아이" 정체성 굳히기'],
+  books:[
+   {h:'리더스로 실력 올리면서 계속 들려주세요',t:'어스본 영 리딩 1~2단계',d:'나우 아임 리딩, 퍼스트 리틀 리더스로 읽기 실력을 높여 가면서 영 리딩도 계속 들려주세요.'},
+   {s:1,h:'ORT 졸업 후 취향 저격 SF 어드벤처',t:'ORT 에일리언 (프로젝트 X)',d:'ORT 졸업 후 취향 저격 SF 어드벤처. 모험 세계관이라 챕터북 전환기의 뿌리가 돼요.'},
+   {s:1,h:'게임처럼 "한 판 더" 넘기는 얼리 챕터북',t:'프레스 스타트 (#1~#15)',u:C+'gdb4Sw5Dmm',d:'게임 화면 속에서 펼쳐지는 얼리 챕터북이에요. 스테이지 깨듯 챕터를 깨는 구조라 "한 판 더" 하듯 넘겨요. 도그맨 전 몸풀기로도 좋아요.'},
+   {s:1,h:'만화 형식으로 글밥 공포 없이 챕터북 진입',t:'도그맨 / 캣 키드 (그래픽 노블)',u:C+'gdbKb0m55o',d:'설명이 필요 없는 이 시기 치트키. 만화 형식이라 글밥 공포 없이 챕터북에 들어가요.'},
+   {h:'올컬러 삽화로 챕터북 문턱을 낮춘 시리즈',t:'머시 왓슨',u:C+'gdcirHJVka',d:'챕터가 짧고 올컬러 삽화가 가득해서 그림책에서 챕터북으로 넘어갈 때 많이 찾는 시리즈예요. 유머러스한 이야기 덕에 문턱이 낮아요.'},
+   {h:'팬케이크 좋아하는 꼬마 탐정의 추리 챕터북',t:'네이트 더 그레이트',u:'https://www.wendybook.com/goods/detail/196088',d:'팬케이크를 좋아하는 꼬마 탐정 네이트가 강아지 슬러지와 함께 동네의 작은 사건을 해결하는 이야기예요. 문장이 짧고 그림이 중간중간 있어서 얼리 챕터북으로 넘어가기 좋아요. 단서를 하나씩 따라가다 보면 범인이 궁금해서 다음 장을 넘기게 돼요.'}
+  ],
+  extra:'이 외에도: 피자 앤 타코, 보리스, 아울 다이어리, Froggy, I Can Read 시리즈, Narwhal and Jelly, Hotdog, 쿵푸치킨',
+  extra2:'이후 읽어갈 책들: 헨리 앤 머지, 로빈힐스쿨, 마이위어드스쿨, 트리하우스, 매직트리하우스 그래픽노블, 매직트리하우스, 드래곤마스터 등',
+  tips:['영어 영상물의 비중은 줄이고 영어 읽기(청독, 음독) 비중을 더 늘려 주어야 할 타이밍이에요.','시리즈물에 꽂히게 하는 게 핵심이에요. 한 시리즈 완주 경험 = 평생 읽기 근육.','한글책 독서량도 꼭 같이 챙기세요. 모국어로 키운 사고력이 영어로 그대로 전이돼요.'],
+  mistakes:['AR 지수·레벨테스트에 몰입하기. 숫자가 목표가 되는 순간 책이 시험지가 돼요. 목표는 영어를 좋아하는 채로 오래 가는 거예요.']}
+];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function lines(s){return String(s).replace(/([요다면죠][.!?])\s+/g,'$1\n').split('\n').map(function(x){return '<span class="ln">'+esc(x)+'</span>'}).join('')}
+function bookList(list){return '<ul class="books">'+list.map(function(b){
+  var links=(b.u?'<a class="link" href="'+esc(b.u)+'" target="_blank" rel="noopener">'+esc(b.ul||'책 보러 가기 →')+'</a>':'')+(b.u2?'<a class="link" href="'+esc(b.u2)+'" target="_blank" rel="noopener">'+esc(b.ul2)+'</a>':'');
+  return '<li class="book'+(b.s?' is-star':'')+(b.gp?' has-gp':'')+'"><details><summary>'
+   +'<span class="sum"><span class="ttl">'+(b.s?'<span class="star" aria-label="추천">★</span>':'')+'<span class="bt">'+esc(b.t)+'</span>'+(b.tag?' <span class="tag">'+esc(b.tag)+'</span>':'')+'</span>'
+   +(b.h?'<span class="hook">'+esc(b.h)+'</span>':'')+'</span><span class="chev" aria-hidden="true"></span></summary>'
+   +'<div class="bd"><p>'+lines(b.d)+'</p>'+(links?'<div class="links">'+links+'</div>':'')+'</div></details>'
+   +(b.gp?'<div class="gprow"><span class="gp">📌 '+esc(b.gp)+'</span>'+(b.nt?'<a class="bnotify" href="'+esc(b.nt)+'" target="_blank" rel="noopener">🔔 알림 받기</a>':'')+'</div>':'')
+   +'</li>';}).join('')+'</ul>';}
+function shelf(name,list,first){return '<div class="shelf"><div class="shelf-title"><span>'+name+'</span>'+(first?'<button type="button" class="expand" aria-pressed="false">모두 펼치기</button>':'')+'</div>'+bookList(list)+'</div>'}
+function chips(list){return '<div class="chips">'+list.map(function(c){return '<span class="chip">'+esc(c.trim())+'</span>'}).join('')+'</div>'}
+function media(s){
+  var rows='';
+  if(s.shelf3){var b=s.shelf3.books[0];rows+='<div class="mrow"><span class="mlabel">DVD</span>'+chips(b.t.split(' · '))+'</div>'}
+  if(s.video){var i=s.video.indexOf(':');rows+='<div class="mrow"><span class="mlabel">'+esc(s.video.slice(0,i).trim())+'</span>'+chips(s.video.slice(i+1).split(','))+'</div>'}
+  if(!rows)return '';
+  return '<div class="media"><div class="mhead"><span class="tv" aria-hidden="true"></span><b>이 시기 함께 보면 좋은 영상</b>'+(s.mnote?'<span class="mnote">('+esc(s.mnote)+')</span>':'')+'</div>'+rows+'</div>';
+}
+var html=STAGES.map(function(s){
+  var h='<section class="stage" id="'+s.id+'" style="--soft:var(--'+s.c+'-soft);--spine:var(--'+s.c+')">';
+  h+='<div class="stage-head"><span class="num">STAGE '+s.n+'</span><h2>'+s.n+'단계. '+esc(s.title)+'</h2><span class="age">'+esc(s.age)+' 무렵</span><p class="motto">'+esc(s.motto)+'</p></div>';
+  if(s.note)h+='<p class="snote">'+esc(s.note)+'</p>';
+  h+='<div class="goal"><b>이 시기 목표</b>'+s.goal.map(function(g){return '<p>'+lines('✔️ '+g)+'</p>'}).join('')+'</div>';
+  h+=shelf('도운이네 책장',s.books,true);
+  if(s.shelf2)h+=shelf(esc(s.shelf2.name),s.shelf2.books,false);
+  if(s.extra)h+='<p class="extra">'+esc(s.extra)+'</p>';
+  if(s.extra2)h+='<p class="extra next">'+esc(s.extra2)+'</p>';
+  h+=media(s);
+  h+='<details class="tips"><summary><span class="sum"><span class="ttl">💡 이 시기 팁 '+s.tips.length+'가지</span></span><span class="chev" aria-hidden="true"></span></summary><ul>'+s.tips.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul></details>';
+  h+='<div class="mistake"><b class="mlab">흔한 실수 ❌</b>'+s.mistakes.map(function(m){var i=m.indexOf('. ');var head=i<0?m:m.slice(0,i),rest=i<0?'':m.slice(i+2);return '<div class="mitem"><strong>'+esc(head)+'</strong>'+(rest?'<p class="mrest">'+esc(rest)+'</p>':'')+'</div>'}).join('')+'</div>';
+  return h+'</section>';}).join('');
+document.getElementById('stages').innerHTML=html;
+document.getElementById('stages').style.cssText='display:flex;flex-direction:column;gap:48px';
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.expand');if(!b)return;var st=b.closest('.stage'),on=b.getAttribute('aria-pressed')!=='true';st.querySelectorAll('.book details').forEach(function(d){d.open=on});b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'모두 접기':'모두 펼치기'});
+var cb=document.getElementById('onlyStar');
+try{if(localStorage.getItem('onlyStar')==='1'){cb.checked=true;document.body.classList.add('only-star')}}catch(e){}
+cb.addEventListener('change',function(){document.body.classList.toggle('only-star',cb.checked);try{localStorage.setItem('onlyStar',cb.checked?'1':'0')}catch(e){}});
+</script>
+
+
+</body>
+</html>
