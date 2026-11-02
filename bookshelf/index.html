@@ -19,7 +19,7 @@
   --s2:#EE8B5E; --s2-soft:#FCE6DA;
   --s3:#6FA58A; --s3-soft:#E1EFE7;
   --s4:#5B8FC9; --s4-soft:#E1ECF8;
-  --star:#D9A400; --blue-ink:#2F6DB5;
+  --star:#D9A400; --blue-ink:#2F6DB5; --hot:#C9302C; --hot-ink:#FFFFFF;
   --screen:#EEEDEA; --screen-ink:#1F2A37; --screen-chip:#FFFFFF;
   --display:"Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
   --body:"Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
@@ -28,14 +28,14 @@
   --paper:#14181E; --sheet:#1C222A; --ink:#ECEAE4; --muted:#A3ACB6; --line:#2E3640;
   --accent:#9DB8DD; --accent-soft:#233246;
   --s1:#E5BE45; --s1-soft:#3A331B; --s2:#E9926A; --s2-soft:#3D2A21;
-  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8;
+  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8; --hot:#D9463F; --hot-ink:#FFFFFF;
   --screen:#25282D; --screen-ink:#ECEAE4; --screen-chip:#30343A;
   color-scheme:dark }}
 :root[data-theme="dark"]{
   --paper:#14181E; --sheet:#1C222A; --ink:#ECEAE4; --muted:#A3ACB6; --line:#2E3640;
   --accent:#9DB8DD; --accent-soft:#233246;
   --s1:#E5BE45; --s1-soft:#3A331B; --s2:#E9926A; --s2-soft:#3D2A21;
-  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8;
+  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8; --hot:#D9463F; --hot-ink:#FFFFFF;
   --screen:#25282D; --screen-ink:#ECEAE4; --screen-chip:#30343A;
   color-scheme:dark }
 *{box-sizing:border-box}
@@ -171,6 +171,7 @@ body.only-star .book:not(.is-star){display:none}
 @media (max-width:460px){.facts{gap:8px}.facts div{padding:10px}.facts dd{font-size:15.5px}}
 .notify{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;border-radius:999px;padding:16px 20px}
 .notify:hover{filter:brightness(1.08)}
+.notify.hot{background:var(--hot);color:var(--hot-ink)}
 .oxpic{display:block;width:100%;max-width:100%;height:auto;border-radius:12px}
 .compo{font-size:15px;color:var(--muted);margin-top:-8px}
 .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -272,7 +273,7 @@ body.editing .wrap{padding-bottom:120px}
     </dl>
     <p>오픈 소식은 인스타 스토리와 피드에서도 알려드려요!</p>
     <div class="cta">
-      <a class="notify" href="https://www.instagram.com/p/DfJ_Hfiyxr2/" target="_blank" rel="noopener">🔔 자세히 보고 알림신청</a>
+      <a class="notify hot" href="https://blog.naver.com/angee8293/224461797573" target="_blank" rel="noopener">특가 오픈 자세히 보기</a>
       <a class="notify follow" href="https://www.instagram.com/rori.an/" target="_blank" rel="noopener">로리안 팔로우해두기</a>
     </div>
   </section>
