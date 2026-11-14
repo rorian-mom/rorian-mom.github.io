@@ -311,7 +311,7 @@ footer{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:
   }
   names.forEach(function(n){
     var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');
-    b.textContent=n+' '+shelf[n].list.length;
+    b.textContent=n==='Vooks'?n:n+' '+shelf[n].list.length;
     b.addEventListener('click',function(){show(n)});tabs.appendChild(b);
   });
   show(names[0]);
