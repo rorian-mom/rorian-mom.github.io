@@ -19,7 +19,7 @@
   --s2:#EE8B5E; --s2-soft:#FCE6DA;
   --s3:#6FA58A; --s3-soft:#E1EFE7;
   --s4:#5B8FC9; --s4-soft:#E1ECF8;
-  --star:#D9A400; --blue-ink:#2F6DB5; --hot:#C9302C; --hot-ink:#FFFFFF;
+  --star:#D9A400; --blue-ink:#2F6DB5; --hot:#C9302C; --hot-ink:#FFFFFF; --orange:#F5934A;
   --screen:#EEEDEA; --screen-ink:#1F2A37; --screen-chip:#FFFFFF;
   --display:"Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
   --body:"Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
@@ -28,14 +28,14 @@
   --paper:#14181E; --sheet:#1C222A; --ink:#ECEAE4; --muted:#A3ACB6; --line:#2E3640;
   --accent:#9DB8DD; --accent-soft:#233246;
   --s1:#E5BE45; --s1-soft:#3A331B; --s2:#E9926A; --s2-soft:#3D2A21;
-  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8; --hot:#D9463F; --hot-ink:#FFFFFF;
+  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8; --hot:#D9463F; --hot-ink:#FFFFFF; --orange:#F0975A;
   --screen:#25282D; --screen-ink:#ECEAE4; --screen-chip:#30343A;
   color-scheme:dark }}
 :root[data-theme="dark"]{
   --paper:#14181E; --sheet:#1C222A; --ink:#ECEAE4; --muted:#A3ACB6; --line:#2E3640;
   --accent:#9DB8DD; --accent-soft:#233246;
   --s1:#E5BE45; --s1-soft:#3A331B; --s2:#E9926A; --s2-soft:#3D2A21;
-  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8; --hot:#D9463F; --hot-ink:#FFFFFF;
+  --s3:#7DB497; --s3-soft:#22342B; --s4:#7FA8D8; --s4-soft:#213044; --star:#E8BC2E; --blue-ink:#8DB6E8; --hot:#D9463F; --hot-ink:#FFFFFF; --orange:#F0975A;
   --screen:#25282D; --screen-ink:#ECEAE4; --screen-chip:#30343A;
   color-scheme:dark }
 *{box-sizing:border-box}
@@ -171,6 +171,7 @@ body.only-star .book:not(.is-star){display:none}
 @media (max-width:460px){.facts{gap:8px}.facts div{padding:10px}.facts dd{font-size:15.5px}}
 .notify{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;border-radius:999px;padding:16px 20px}
 .notify:hover{filter:brightness(1.08)}
+.notify.reel{background:var(--orange);color:#1F2A37}
 .notify.hot{background:var(--s1);color:#1F2A37}
 .oxpic{display:block;width:100%;max-width:100%;height:auto;border-radius:12px}
 .openpill{align-self:flex-start;font-size:14px;font-weight:800;color:#1F2A37;background:var(--s1);border-radius:999px;padding:4px 12px;margin-top:-4px}
@@ -280,7 +281,9 @@ body.editing .wrap{padding-bottom:120px}
     <p>오픈 소식은 인스타 스토리와 피드에서도 알려드려요!</p>
     <div class="cta">
       <a class="notify hot" href="https://naver.me/5T0stpT1" target="_blank" rel="noopener">🔔 알림 신청하기</a>
-      <a class="notify follow" href="https://www.instagram.com/rori.an/" target="_blank" rel="noopener">로리안 팔로우하고 정보 안 놓치고 받기</a>
+      <a class="notify reel" href="https://www.instagram.com/reel/DfzTpGty2Hg/" target="_blank" rel="noopener">▶ 공구예고 릴스 바로가기</a>
+      <!-- 보관: 팔로우 버튼 (다시 쓸 때 hidden 지우기) -->
+      <a class="notify follow" href="https://www.instagram.com/rori.an/" target="_blank" rel="noopener" hidden>로리안 팔로우하고 정보 안 놓치고 받기</a>
     </div>
   </section>
 
