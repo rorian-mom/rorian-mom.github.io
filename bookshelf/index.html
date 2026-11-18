@@ -174,7 +174,9 @@ body.only-star .book:not(.is-star){display:none}
 .notify.reel{background:var(--orange);color:#1F2A37}
 .notify.hot{background:var(--s1);color:#1F2A37}
 .oxpic{display:block;width:100%;max-width:100%;height:auto;border-radius:12px}
-.openpill{align-self:flex-start;font-size:14px;font-weight:800;color:#1F2A37;background:var(--s1);border-radius:999px;padding:4px 12px;margin-top:-4px}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:-4px}
+.openpill.up{background:var(--hot);color:var(--hot-ink)}
+.openpill{align-self:flex-start;font-size:14px;font-weight:800;color:#1F2A37;background:var(--s1);border-radius:999px;padding:4px 12px}
 .optlabel{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin-bottom:-8px}
 .opts{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:16px}
 .facts.one{grid-template-columns:1fr}
@@ -267,7 +269,7 @@ body.editing .wrap{padding-bottom:120px}
 
   <section class="oxford" id="oxford">
     <p class="eyebrow">로리안 PICK</p>
-    <span class="openpill">📅 11/18 공구 오픈</span>
+    <div class="pills"><span class="openpill">📅 11/18 공구 오픈</span><span class="openpill up">내년 가격인상 확정</span></div>
     <h2>노부영 베스트 + 스테디 베스트 최저가 🔥</h2>
     <p class="optlabel">공구 품목</p>
     <ul class="opts">
